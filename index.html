@@ -4,46 +4,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SoulStretch Yoga</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <header id="navbar">
-    <nav class="nav-container">
+  <header>
+    <nav class="navbar">
       <div class="logo">SoulStretch Yoga</div>
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
         <li><a href="#classes">Classes</a></li>
         <li><a href="#inspiration">Inspiration</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><button id="theme-toggle">Toggle Mode</button></li>
       </ul>
+      <button id="modeToggle">Toggle Mode</button>
     </nav>
   </header>
 
-  <section id="home" class="section home-section">
-    <div class="intro-text">
+  <section class="hero">
+    <div class="hero-content">
       <h1>Welcome to SoulStretch Yoga</h1>
       <p>Find balance, strength, and calm with personalized yoga sessions</p>
-      <p class="demo-text">Fill the form for a free demo class.</p>
-      <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
-        Join a Demo Class
-      </button>
+      <p class="highlight">Fill the form for a free demo class.</p>
+      <a href="#contact" class="cta-btn">Join a Demo Class</a>
     </div>
   </section>
 
-  <section id="classes" class="section">
+  <section id="classes">
     <h2>Our Classes</h2>
-    <p><strong>Private Sessions:</strong> ₹2000/month (1 on 1)</p>
-    <p><strong>Online Group Classes Yoga:</strong> ₹1000/month</p>
-    <p><strong>Meditation Sessions:</strong> Free (Register and get one class free)</p>
-    <p><strong>Schedule:</strong> Monday to Friday – 7 AM & 6 PM / Flexible timings on request</p>
-
-    <h3>Benefits</h3>
+    <div class="info-card">
+      <ul>
+        <li><strong>Private Sessions:</strong> ₹2000/month (1 on 1)</li>
+        <li><strong>Online Group Classes Yoga:</strong> ₹1000/month</li>
+        <li><strong>Meditation Sessions:</strong> Free (Register and get one class free)</li>
+        <li><strong>Schedule:</strong> Monday to Friday – 7 AM & 6 PM / Flexible timings on request</li>
+      </ul>
+    </div>
+    <h2>Benefits</h2>
     <div class="benefits-grid">
       <div>
-        <h4>Physical:</h4>
+        <h4>Physical</h4>
         <ul>
           <li>Improves flexibility</li>
           <li>Builds strength</li>
@@ -54,7 +53,7 @@
         </ul>
       </div>
       <div>
-        <h4>Mental & Emotional:</h4>
+        <h4>Mental & Emotional</h4>
         <ul>
           <li>Reduces stress and anxiety</li>
           <li>Improves concentration</li>
@@ -63,7 +62,7 @@
         </ul>
       </div>
       <div>
-        <h4>Spiritual & Lifestyle:</h4>
+        <h4>Spiritual & Lifestyle</h4>
         <ul>
           <li>Increases self-awareness</li>
           <li>Fosters discipline and focus</li>
@@ -73,59 +72,61 @@
     </div>
   </section>
 
-  <section id="inspiration" class="section">
+  <section id="inspiration">
     <h2>Inspiring Journeys</h2>
     <div class="inspiration-grid">
-      <div class="card reveal">
-        <img src="https://drive.google.com/uc?id=1_zlupYIA3EGMrP64UiEDRfR5Wjdz4A-S" alt="Steve Jobs" />
+      <div class="card fade-in">
+        <img src="assets/jobs.jpg" alt="Steve Jobs"/>
         <h4>Steve Jobs – Co-founder of Apple</h4>
         <p>Jobs practiced Zen Buddhism and was known for his deep interest in yoga and mindfulness, which helped shape his creative thinking and focus.</p>
       </div>
-      <div class="card reveal">
-        <img src="https://drive.google.com/uc?id=180v1SeRFMkW1gfp_zyP0hIi9Gpkjoz8l" alt="Sachin Tendulkar" />
+      <div class="card fade-in">
+        <img src="assets/sachin.jpg" alt="Sachin Tendulkar"/>
         <h4>Sachin Tendulkar – Cricketer</h4>
         <p>The Indian cricket legend has shared how yoga helped him manage stress, recover from injuries, and maintain mental clarity.</p>
       </div>
-      <div class="card reveal">
-        <img src="https://drive.google.com/uc?id=11U-BsN-yfX4bmRNxM-dZeL_yU6pUU7XS" alt="Virat Kohli" />
+      <div class="card fade-in">
+        <img src="assets/virat.jpg" alt="Virat Kohli"/>
         <h4>Virat Kohli – Cricketer</h4>
         <p>Kohli incorporates yoga into his fitness regime to enhance flexibility, core strength, and mental focus.</p>
       </div>
-      <div class="card reveal">
-        <img src="https://drive.google.com/uc?id=1uxie-XWh2MiIUe48B-pN2HC7wWBvUKit" alt="Robert Downey Jr." />
+      <div class="card fade-in">
+        <img src="assets/rdj.jpg" alt="Robert Downey Jr."/>
         <h4>Robert Downey Jr. – Actor</h4>
         <p>Yoga helped him overcome addiction and improve his mental health and discipline.</p>
       </div>
     </div>
   </section>
 
-  <section id="testimonials" class="section">
+  <section id="testimonials">
     <h2>Real People, Real Experiences</h2>
-    <div class="testimonial-carousel">
-      <!-- Testimonials will be injected by JavaScript -->
+    <div class="testimonial-slider">
+      <!-- Testimonial flashcards will be filled via JavaScript -->
     </div>
   </section>
 
-  <section id="contact" class="section">
+  <section id="contact">
     <h2>Contact</h2>
     <p>Email: soulstretch.lifeyoga.com | Phone: +91 7607042622</p>
-    <form id="contactForm" novalidate>
-      <input type="text" id="name" name="name" placeholder="Name" required />
-      <input type="number" id="age" name="age" placeholder="Age" required />
-      <select id="gender" name="gender" required>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Name" required/>
+      <input type="number" id="age" placeholder="Age" required/>
+      <select id="gender" required>
         <option value="">Gender</option>
         <option>Male</option>
         <option>Female</option>
         <option>Other</option>
       </select>
-      <input type="email" id="email" name="email" placeholder="Contact (Email or Phone)" required />
+      <input type="text" id="contact" placeholder="Contact (Email or Phone)" required/>
       <button type="submit">Submit</button>
     </form>
   </section>
 
-  <footer class="section">
-    <p>&copy; 2025 SoulStretch Yoga</p>
-    <button id="backToTop">↑ Back to Top</button>
+  <footer>
+    <p>© 2025 SoulStretch Yoga</p>
+    <button id="backToTop">Back to Top</button>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
