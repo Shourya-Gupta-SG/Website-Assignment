@@ -1,41 +1,22 @@
-// Scroll reveal animation
-const revealCards = () => {
-  const cards = document.querySelectorAll('.card');
-  const windowHeight = window.innerHeight;
-
-  cards.forEach(card => {
-    const top = card.getBoundingClientRect().top;
-    if (top < windowHeight - 100) {
-      card.classList.add('reveal');
-    }
-  });
-};
-
-window.addEventListener('scroll', revealCards);
-window.addEventListener('load', revealCards);
-
-// Theme toggler
-const themeToggleBtn = document.getElementById('themeToggle');
-themeToggleBtn.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-  const theme = document.body.classList.contains('dark') ? 'Dark' : 'Light';
-  themeToggleBtn.textContent = `${theme} Mode`;
+// Toggle Dark Mode
+document.getElementById('toggleModeBtn').addEventListener('click', function () {
+  document.body.classList.toggle('dark-mode');
 });
 
-// Back to top button
-const backToTopBtn = document.getElementById('backToTop');
-backToTopBtn.addEventListener('click', () => {
+// Back to Top
+document.getElementById('backToTop').addEventListener('click', function () {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Placeholder for carousel behavior (can be enhanced with libraries or custom logic)
-const testimonials = document.querySelectorAll('.testimonial-carousel > div');
-if (testimonials.length) {
-  let index = 0;
+// Testimonials auto-scroll (optional enhancement)
+const slider = document.querySelector('.testimonial-slider');
+if (slider) {
+  let scrollAmount = 0;
   setInterval(() => {
-    testimonials.forEach((t, i) => {
-      t.style.opacity = i === index ? '1' : '0.4';
-    });
-    index = (index + 1) % testimonials.length;
+    scrollAmount += 300;
+    if (scrollAmount >= slider.scrollWidth) {
+      scrollAmount = 0;
+    }
+    slider.scrollTo({ left: scrollAmount, behavior: 'smooth' });
   }, 4000);
 }
