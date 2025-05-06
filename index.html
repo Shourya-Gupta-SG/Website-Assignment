@@ -4,45 +4,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SoulStretch Yoga</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <header>
-    <nav class="navbar">
-      <div class="logo">SoulStretch Yoga</div>
+    <nav>
+      <h1>SoulStretch Yoga</h1>
       <ul class="nav-links">
         <li><a href="#classes">Classes</a></li>
         <li><a href="#inspiration">Inspiration</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="#contact">Contact</a></li>
+        <button onclick="toggleMode()">Toggle Mode</button>
       </ul>
-      <button id="modeToggle">Toggle Mode</button>
     </nav>
   </header>
 
   <section class="hero">
     <div class="hero-content">
-      <h1>Welcome to SoulStretch Yoga</h1>
+      <h2>Welcome to SoulStretch Yoga</h2>
       <p>Find balance, strength, and calm with personalized yoga sessions</p>
-      <p class="highlight">Fill the form for a free demo class.</p>
-      <a href="#contact" class="cta-btn">Join a Demo Class</a>
+      <p><strong style="color: red;">Fill the form for a free demo class.</strong></p>
+      <a class="btn" href="#contact">Join a Demo Class</a>
     </div>
   </section>
 
   <section id="classes">
     <h2>Our Classes</h2>
-    <div class="info-card">
-      <ul>
-        <li><strong>Private Sessions:</strong> ₹2000/month (1 on 1)</li>
-        <li><strong>Online Group Classes Yoga:</strong> ₹1000/month</li>
-        <li><strong>Meditation Sessions:</strong> Free (Register and get one class free)</li>
-        <li><strong>Schedule:</strong> Monday to Friday – 7 AM & 6 PM / Flexible timings on request</li>
-      </ul>
-    </div>
-    <h2>Benefits</h2>
-    <div class="benefits-grid">
+    <ul>
+      <li><strong>Private Sessions:</strong> ₹2000/month (1 on 1)</li>
+      <li><strong>Online Group Classes Yoga:</strong> ₹1000/month</li>
+      <li><strong>Meditation Sessions:</strong> Free (Register and get one class free)</li>
+      <li><strong>Schedule:</strong> Monday to Friday – 7 AM & 6 PM / Flexible timings on request</li>
+    </ul>
+
+    <div class="benefits">
       <div>
-        <h4>Physical</h4>
+        <h3>Physical</h3>
         <ul>
           <li>Improves flexibility</li>
           <li>Builds strength</li>
@@ -53,7 +51,7 @@
         </ul>
       </div>
       <div>
-        <h4>Mental & Emotional</h4>
+        <h3>Mental & Emotional</h3>
         <ul>
           <li>Reduces stress and anxiety</li>
           <li>Improves concentration</li>
@@ -62,7 +60,7 @@
         </ul>
       </div>
       <div>
-        <h4>Spiritual & Lifestyle</h4>
+        <h3>Spiritual & Lifestyle</h3>
         <ul>
           <li>Increases self-awareness</li>
           <li>Fosters discipline and focus</li>
@@ -75,56 +73,55 @@
   <section id="inspiration">
     <h2>Inspiring Journeys</h2>
     <div class="inspiration-grid">
-      <div class="card fade-in">
-        <img src="assets/jobs.jpg" alt="Steve Jobs"/>
+      <div>
+        <img src="assets/steve.jpg" alt="Steve Jobs"/>
         <h4>Steve Jobs – Co-founder of Apple</h4>
-        <p>Jobs practiced Zen Buddhism and was known for his deep interest in yoga and mindfulness, which helped shape his creative thinking and focus.</p>
+        <p>Practiced Zen Buddhism and used mindfulness to shape his creative thinking.</p>
       </div>
-      <div class="card fade-in">
+      <div>
         <img src="assets/sachin.jpg" alt="Sachin Tendulkar"/>
         <h4>Sachin Tendulkar – Cricketer</h4>
-        <p>The Indian cricket legend has shared how yoga helped him manage stress, recover from injuries, and maintain mental clarity.</p>
+        <p>Used yoga for recovery, focus, and mental clarity.</p>
       </div>
-      <div class="card fade-in">
+      <div>
         <img src="assets/virat.jpg" alt="Virat Kohli"/>
         <h4>Virat Kohli – Cricketer</h4>
-        <p>Kohli incorporates yoga into his fitness regime to enhance flexibility, core strength, and mental focus.</p>
+        <p>Used yoga to improve flexibility and mental focus.</p>
       </div>
-      <div class="card fade-in">
+      <div>
         <img src="assets/rdj.jpg" alt="Robert Downey Jr."/>
         <h4>Robert Downey Jr. – Actor</h4>
-        <p>Yoga helped him overcome addiction and improve his mental health and discipline.</p>
+        <p>Used yoga to overcome addiction and improve discipline.</p>
       </div>
     </div>
   </section>
 
   <section id="testimonials">
     <h2>Real People, Real Experiences</h2>
-    <div class="testimonial-slider">
-      <!-- Testimonial flashcards will be filled via JavaScript -->
-    </div>
+    <p>"Yoga helped me find balance and peace. – Client A"</p>
+    <p>"SoulStretch Yoga transformed my mornings! – Client B"</p>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
     <p>Email: soulstretch.lifeyoga.com | Phone: +91 7607042622</p>
-    <form id="contactForm">
-      <input type="text" id="name" placeholder="Name" required/>
-      <input type="number" id="age" placeholder="Age" required/>
-      <select id="gender" required>
-        <option value="">Gender</option>
+    <form>
+      <input type="text" placeholder="Name"/>
+      <input type="number" placeholder="Age"/>
+      <select>
+        <option>Gender</option>
         <option>Male</option>
         <option>Female</option>
         <option>Other</option>
       </select>
-      <input type="text" id="contact" placeholder="Contact (Email or Phone)" required/>
+      <input type="text" placeholder="Contact (Email or Phone)"/>
       <button type="submit">Submit</button>
     </form>
   </section>
 
   <footer>
-    <p>© 2025 SoulStretch Yoga</p>
-    <button id="backToTop">Back to Top</button>
+    <p>&copy; 2025 SoulStretch Yoga</p>
+    <button onclick="scrollToTop()">Back to Top</button>
   </footer>
 
   <script src="script.js"></script>
