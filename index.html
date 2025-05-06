@@ -5,37 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SoulStretch Yoga</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <div class="nav-container">
-      <h1>SoulStretch Yoga</h1>
-    </div>
+  <header id="navbar">
+    <nav class="nav-container">
+      <div class="logo">SoulStretch Yoga</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#inspiration">Inspiration</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="theme-toggle">Toggle Mode</button></li>
+      </ul>
+    </nav>
   </header>
 
-  <section class="hero">
-    <h2>Welcome to SoulStretch Yoga</h2>
-    <p>Find balance, strength, and calm with personalized yoga sessions</p>
-    <button onclick="scrollToSection('classes')">Join a Class</button>
+  <section id="home" class="section home-section">
+    <div class="intro-text">
+      <h1>Welcome to SoulStretch Yoga</h1>
+      <p>Find balance, strength, and calm with personalized yoga sessions</p>
+      <p class="demo-text">Fill the form for a free demo class.</p>
+      <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
+        Join a Demo Class
+      </button>
+    </div>
   </section>
 
-  <section class="about">
-    <h2>About SoulStretch Yoga</h2>
-    <p>SoulStretch Yoga offers personalized yoga instruction designed to meet your physical, mental, and emotional needs. Whether you’re new to yoga or looking to deepen your practice, we provide a nurturing space for everyone.</p>
-  </section>
-
-  <section class="classes" id="classes">
+  <section id="classes" class="section">
     <h2>Our Classes</h2>
-    <ul>
-      <li><strong>Private Sessions:</strong> ₹2000/month (1 on 1)</li>
-      <li><strong>Online Group Classes Yoga:</strong> ₹1000/month</li>
-      <li><strong>Meditation Sessions:</strong> Free (Register and get one class free)</li>
-    </ul>
+    <p><strong>Private Sessions:</strong> ₹2000/month (1 on 1)</p>
+    <p><strong>Online Group Classes Yoga:</strong> ₹1000/month</p>
+    <p><strong>Meditation Sessions:</strong> Free (Register and get one class free)</p>
     <p><strong>Schedule:</strong> Monday to Friday – 7 AM & 6 PM / Flexible timings on request</p>
+
     <h3>Benefits</h3>
-    <div class="benefits">
+    <div class="benefits-grid">
       <div>
-        <strong>Physical:</strong>
+        <h4>Physical:</h4>
         <ul>
           <li>Improves flexibility</li>
           <li>Builds strength</li>
@@ -46,7 +54,7 @@
         </ul>
       </div>
       <div>
-        <strong>Mental & Emotional:</strong>
+        <h4>Mental & Emotional:</h4>
         <ul>
           <li>Reduces stress and anxiety</li>
           <li>Improves concentration</li>
@@ -55,7 +63,7 @@
         </ul>
       </div>
       <div>
-        <strong>Spiritual & Lifestyle:</strong>
+        <h4>Spiritual & Lifestyle:</h4>
         <ul>
           <li>Increases self-awareness</li>
           <li>Fosters discipline and focus</li>
@@ -65,52 +73,59 @@
     </div>
   </section>
 
-  <section class="testimonials">
+  <section id="inspiration" class="section">
     <h2>Inspiring Journeys</h2>
-
-    <h3>Famous Personalities Who Practice Yoga</h3>
-    <ul>
-      <li><strong>Steve Jobs:</strong> Mindfulness and creativity through Zen & yoga</li>
-      <li><strong>Madonna:</strong> Maintained balance and fitness with Ashtanga yoga</li>
-      <li><strong>Sachin Tendulkar:</strong> Managed stress and injury recovery with yoga</li>
-      <li><strong>Jennifer Aniston, Virat Kohli, Oprah, RDJ, Kareena Kapoor Khan</strong> – All transformed by yoga</li>
-    </ul>
-
-    <h3>Real People, Real Experiences</h3>
-    <div class="testimonial-gallery">
-      <div class="testimonial">
-        <img src="images/aarti.jpg" alt="Aarti Mehra" />
-        <p><strong>Aarti Mehra, 34 – Mumbai:</strong> “Felt calmer, slept better, and improved posture.”</p>
+    <div class="inspiration-grid">
+      <div class="card reveal">
+        <img src="https://drive.google.com/uc?id=1_zlupYIA3EGMrP64UiEDRfR5Wjdz4A-S" alt="Steve Jobs" />
+        <h4>Steve Jobs – Co-founder of Apple</h4>
+        <p>Jobs practiced Zen Buddhism and was known for his deep interest in yoga and mindfulness, which helped shape his creative thinking and focus.</p>
       </div>
-      <div class="testimonial">
-        <img src="images/rajesh.jpg" alt="Rajesh Iyer" />
-        <p><strong>Rajesh Iyer, 47 – Bangalore:</strong> “Chronic back pain gone. More focused and pain-free.”</p>
+      <div class="card reveal">
+        <img src="https://drive.google.com/uc?id=180v1SeRFMkW1gfp_zyP0hIi9Gpkjoz8l" alt="Sachin Tendulkar" />
+        <h4>Sachin Tendulkar – Cricketer</h4>
+        <p>The Indian cricket legend has shared how yoga helped him manage stress, recover from injuries, and maintain mental clarity.</p>
       </div>
-      <!-- Add more testimonials in same format -->
+      <div class="card reveal">
+        <img src="https://drive.google.com/uc?id=11U-BsN-yfX4bmRNxM-dZeL_yU6pUU7XS" alt="Virat Kohli" />
+        <h4>Virat Kohli – Cricketer</h4>
+        <p>Kohli incorporates yoga into his fitness regime to enhance flexibility, core strength, and mental focus.</p>
+      </div>
+      <div class="card reveal">
+        <img src="https://drive.google.com/uc?id=1uxie-XWh2MiIUe48B-pN2HC7wWBvUKit" alt="Robert Downey Jr." />
+        <h4>Robert Downey Jr. – Actor</h4>
+        <p>Yoga helped him overcome addiction and improve his mental health and discipline.</p>
+      </div>
     </div>
   </section>
 
-  <section class="contact" id="contact">
+  <section id="testimonials" class="section">
+    <h2>Real People, Real Experiences</h2>
+    <div class="testimonial-carousel">
+      <!-- Testimonials will be injected by JavaScript -->
+    </div>
+  </section>
+
+  <section id="contact" class="section">
     <h2>Contact</h2>
     <p>Email: soulstretch.lifeyoga.com | Phone: +91 7607042622</p>
-    <form onsubmit="handleSubmit(event)">
-      <input type="text" placeholder="Name" required />
-      <input type="number" placeholder="Age" required />
-      <select required>
+    <form id="contactForm" novalidate>
+      <input type="text" id="name" name="name" placeholder="Name" required />
+      <input type="number" id="age" name="age" placeholder="Age" required />
+      <select id="gender" name="gender" required>
         <option value="">Gender</option>
-        <option value="female">Female</option>
-        <option value="male">Male</option>
-        <option value="other">Other</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
       </select>
-      <input type="text" placeholder="Contact (Email or Phone)" required />
+      <input type="email" id="email" name="email" placeholder="Contact (Email or Phone)" required />
       <button type="submit">Submit</button>
     </form>
   </section>
 
-  <footer>
-    <p>© 2025 SoulStretch Yoga</p>
+  <footer class="section">
+    <p>&copy; 2025 SoulStretch Yoga</p>
+    <button id="backToTop">↑ Back to Top</button>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
